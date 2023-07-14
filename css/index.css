@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --primary-color: #eca231;
+  --secondary-color: #ff6651;
+  --white-color: #fff;
+  --text-color: #2d2727;
+  --black: #2d2727;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--text-color);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.container-center {
+  max-width: 1200px;
+  min-width: 90%;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* header css */
+header {
+  background-color: var(--white-color);
+  box-shadow: var(--primary-color) 0px -14px 23px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* responsive  header*/
+
+@media screen and (max-width: 687px) {
+  .header-section {
+    flex-direction: column;
+  }
+  .header-section .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* footer css */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 2rem 0;
+}
+
+footer .container-center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+footer .footer-col span {
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+}
+
+.footer-col ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-col a {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+.footer-col a:hover {
+  color: var(--secondary-color);
+  background: var(--white-color);
+}
+
+/* responsive footer */
+
+@media screen and (max-width: 991px) {
+  footer .container-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
